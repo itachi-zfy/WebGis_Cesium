@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>我的第一个Cesium程序</title>
+        <script src="./Build/Cesium/Cesium.js"></script>
+        <link rel="stylesheet" href="./Build/Cesium/Widgets/widgets.css">
+        <style>
+            html,
+            body,
+            #cesiumContainer{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div id="cesiumContainer"></div>
+        <script>
+            Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlYjIwNTQyMi1kNDc0LTQ3ZDItYjZhYy1iNGI5OTgxMjM0NmMiLCJpZCI6MjI5NjAxLCJpYXQiOjE3MjE0ODMxMjl9.2T_Xgk-UDIHjDq_aT8Dk9OoLJIuXJqPKw9rWYpfp-_k';
+            var viewer = new Cesium.Viewer("cesiumContainer",{
+                geocoder:true,
+                homeButton:true,
+                sceneModePicker:true,
+                baseLayerPicker:true,
+                navigationHelpButton:true,
+                animation:true,
+                timeline:true,
+                fullscreenButton:true,
+
+            });
+        </script>
+    </body>
+</html>
